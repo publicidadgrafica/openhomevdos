@@ -1,0 +1,1018 @@
+/*COLORES
+Gris oscuro: #616161;
+Gris claro: ;
+Verde Logotipo: ;
+Verde Oscuro: ;
+Verde muy oscuro: ;
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/************** INICIO navegador ******************/
+nav img{
+  width: 200px;
+}
+nav{
+  background: #0CC30D;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+nav .logo{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 220px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 8px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+nav .nav-items li:hover{
+  background: #008700;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: #FFF;
+}
+nav form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+nav form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #ff3d00;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background: #e63600;
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon{
+  display: none;
+}
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1140px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  nav form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color: red;
+  padding: 0 5px 0 0;
+}
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+/************** FIN navegador ******************/
+/************** INICIO barra arriba del navegador ******************/
+.toptarea{
+  background: #008700;
+  padding-top: 15px;
+  width: 100%;
+  height: 50px;
+}
+.topletra{
+  font-size: 22px;
+  color: #FFF;
+  text-align: center;
+}
+@media screen and (max-width: 900px){
+  .topletra{
+    font-size: 15px;
+  }
+}
+/************** FIN barra arriba del navegador ******************/
+/************** INICIO slider ******************/
+#slider {
+   margin: 0 auto;
+   width: 100%;
+   text-align: center;
+}
+#slider input[type=radio] {
+   display: none;
+}
+#slider label {
+   cursor:pointer;
+   text-decoration: none;
+}
+#slides {
+   padding: 10px;
+   border: 6px solid #0CC30D;
+   background: #008700;
+   position: relative;
+   z-index: 1;
+}
+#overflow {
+   width: 100%;
+   overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+   margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+   margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+   margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+   margin-left: -300%;
+}
+#slides .inner {
+   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   width: 400%;
+   line-height: 0;
+   height: 400px;
+}
+#slides .slide {
+   width: 25%;
+   float:left;
+   height: 100%;
+   color: #fff;
+}
+#slides .slide_1 {
+   background: #0CC30D;
+}
+#slides .slide_2 {
+   background: #0CC30D;
+}
+#slides .slide_3 {
+   background: #0CC30D;
+}
+#slides .slide_4 {
+   background: #0CC30D;
+}
+#controls {
+   margin: -190px 0 0 0;
+   width: 100%;
+   height: 50px;
+   z-index: 3;
+   position: relative;
+}
+#controls label {
+   transition: opacity 0.2s ease-out;
+   display: none;
+   width: 50px;
+   height: 50px;
+   opacity: .4;
+}
+#controls label:hover {
+   opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+   float:right;
+   margin: 0 20px 0 0;
+   display: block;
+}
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2) {
+   background: url(
+    data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjQwLjgyMyAyNDAuODIzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNDAuODIzIDI0MC44MjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGlkPSJDaGV2cm9uX1JpZ2h0IiBkPSJNNTcuNjMzLDEyOS4wMDdMMTY1LjkzLDIzNy4yNjhjNC43NTIsNC43NCwxMi40NTEsNC43NCwxNy4yMTUsMGM0Ljc1Mi00Ljc0LDQuNzUyLTEyLjQzOSwwLTE3LjE3OQ0KCQlsLTk5LjcwNy05OS42NzFsOTkuNjk1LTk5LjY3MWM0Ljc1Mi00Ljc0LDQuNzUyLTEyLjQzOSwwLTE3LjE5MWMtNC43NTItNC43NC0xMi40NjMtNC43NC0xNy4yMTUsMEw1Ny42MjEsMTExLjgxNg0KCQlDNTIuOTQyLDExNi41MDcsNTIuOTQyLDEyNC4zMjcsNTcuNjMzLDEyOS4wMDd6Ii8+DQoJPGc+DQoJPC9nPg0KCTxnPg0KCTwvZz4NCgk8Zz4NCgk8L2c+DQoJPGc+DQoJPC9nPg0KCTxnPg0KCTwvZz4NCgk8Zz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat;
+   float:left;
+   margin: 0 0 0 20px;
+   display: block;
+}
+#bullets {
+  margin: 130px 0 0;
+  text-align: center;
+  background: #0CC30D;
+  padding: 15px;
+}
+#bullets label {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius:100%;
+   background: #ccc;
+   margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+   background: #444;
+}
+@media screen and (max-width: 900px) {
+   #slide1:checked ~ #controls label:nth-child(2),
+   #slide2:checked ~ #controls label:nth-child(3),
+   #slide3:checked ~ #controls label:nth-child(4),
+   #slide4:checked ~ #controls label:nth-child(1),
+   #slide1:checked ~ #controls label:nth-last-child(1),
+   #slide2:checked ~ #controls label:nth-last-child(4),
+   #slide3:checked ~ #controls label:nth-last-child(3),
+   #slide4:checked ~ #controls label:nth-last-child(2) {
+      margin: 0;
+   }
+   .slide-content img{
+    width: 100%;
+   }
+   #slides .inner {
+   height: 100px;
+   }
+   #controls label {
+   width: 50px;
+   height: 30px;
+   }
+   #controls {
+   margin: -173px 0 0 0;
+   }
+   #bullets {
+   margin: 110px 0 0;
+   padding: 15px;
+  }
+}
+/************** FIN slider ******************/
+/************** INICIO ultimos proyectos ******************/
+.protodo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #008700;
+  height: 100px;
+}
+.protodo p{
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.fondoultimo{
+  width: 100%;
+  height: 200px;
+  background-image: url('img/Ultimos_proyectos_fondo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.proyec{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 400px;
+  grid-template-areas: "prouno prodos protres procuatro";
+}
+.prouno{
+  grid-area: prouno;
+  padding: 30px;
+}
+.prodos{
+  grid-area: prodos;
+  padding: 30px;
+}
+.protres{
+  grid-area: protres;
+  padding: 30px;
+}
+.procuatro{
+  grid-area: procuatro;
+  padding: 30px;
+}
+.prouno img{
+  width: 300px;
+}
+.prodos img{
+  width: 300px;
+}
+.protres img{
+  width: 300px;
+}
+.procuatro img{
+  width: 300px;
+}
+.botoncasa{
+  background: #0CC30D;
+  width: 250px;
+  height: 40px;
+  text-decoration: none;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+.botoncasa p a{
+  color: #FFF;
+  font-weight: 300;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 40px;
+}
+.botonmas{
+  background: #0CC30D;
+  width: 160px;
+  height: 40px;
+  text-decoration: none;
+  margin-left: 60px;
+  border-radius: 20px;
+  margin-top: -20px;
+}
+.botonmas p a{
+  color: #FFF;
+  font-weight: 300;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 30px;
+}
+@media screen and (max-width: 600px) {
+  .proyec{
+  grid-template-areas: "prouno prouno prouno prouno"
+                        "prodos prodos prodos prodos"
+                        "protres protres protres protres"
+                        "procuatro procuatro procuatro procuatro";
+  grid-template-rows: 350px;
+  }
+  .prouno{
+  padding: 60px;
+  } 
+  .prodos{
+  margin-top: 100px;
+  padding: 60px;
+  }
+  .protres{
+  padding: 60px;
+  }
+  .procuatro{
+  padding: 60px;
+  }
+}
+/************** FIN ultimos proyectos ******************/
+/************** INICIO solicitar cotización ******************/
+.orden-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coti{
+  width: 100%;
+  height: 80px;
+  background: #0CC30D;
+}
+.cotibot{
+  background: #008700;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: -30px;
+}
+.cotibot p{
+  color: #FFF;
+  font-weight: 300;
+  text-align: center;
+  line-height: 40px;
+}
+.coti a{
+  text-decoration: none;
+}
+/************** FIN solicitar cotización ******************/
+/************** INICIO nosotros ******************/
+  .nosotros{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-areas: "nosuno nosdos";
+    grid-template-rows: 500px;
+  }
+  .nosuno{
+    grid-area: nosuno;
+    width: 100%;
+    background: #008700;
+  }
+  .nosdos{
+    grid-area: nosdos;
+    width: 100%;
+    background: #008700;
+  }
+  .unon{
+    padding: 70px;
+  }
+  .unon h2{
+    font-size: 50px;
+    color: white;
+  }
+  .unon .nuestra p{
+    padding-top: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+  }
+  .unon .nuestra p mark{
+    background: white;
+    color: #0CC30D;
+    font-weight: 500;
+  }
+  .unon p{
+    margin-top: 40px;
+    color: white;
+    font-size: 15px;
+  }
+  .nosdos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imagendos img{
+    width: 560px;
+    height: 300px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #0CC30D;
+    border: 5px solid #0CC30D;
+    border-radius: 20px;
+  }
+@media screen and (max-width: 600px) {
+  .nosotros{
+    grid-template-areas: "nosuno nosuno"
+                         "nosdos nosdos";
+  }
+  .unon{
+    padding: 50px;
+  }
+  .unon h1{
+    font-size: 30px;
+  }
+  .imagendos img{
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+  }
+}
+/************** FIN nosotros ******************/
+/************** INICIO vision ******************/
+  .vision{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: 300px;
+    grid-template-areas: "viuno vidos";
+  }
+  .viuno{
+    grid-area: viuno;
+    width: 100%;
+    height: 500px;
+    background: #0CC30D;
+  }
+  .vidos{
+    grid-area: vidos;
+    width: 100%;
+    height: 500px;
+    background: #0CC30D;
+  }
+  .vidos{
+    padding: 70px;
+  }
+  .vidos h3{
+    font-size: 50px;
+    color: white;
+    float: right;
+  }
+  .vidos .visiones p{
+    margin-left: 300px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    float: right;
+  }
+  .vidos p{
+    margin-top: 40px;
+    color: white;
+    font-size: 15px;
+    float: right;
+    direction: rtl;
+  }
+  .vidos .visiones p mark{
+    background: white;
+    color: #0CC30D;
+    font-weight: 500;
+  }
+  .viuno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .viuno img{
+    width: 600px;
+    height: 400px;
+    padding: 10px;
+    z-index: 5;
+    box-shadow: 2px 2px 5px #008700;
+    border: 5px solid #008700;
+    border-radius: 20px;
+  }
+  @media screen and (max-width: 600px) {
+  .vision{
+    grid-template-areas: "vidos vidos"
+                         "viuno viuno";
+  }
+  .viuno{
+    height: 600px;
+  }
+  .vidos{
+    height: 600px;
+    padding: 50px;
+  }
+  .vidos h5{
+    font-size: 30px;
+  }
+  .viuno img{
+    width: 100%;
+    height: 400px;
+    margin-top: 150px;
+  }
+}
+/************** FIN vision ******************/
+/************** INICIO servicios ******************/
+  .servitodo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #008700;
+    height: 100px;
+    margin-top: 200px;
+  }
+  .servitodo p{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .borderes{
+    background: #FFF;
+    width: 400px;
+    height: 1px;
+    margin-right: 40px;
+  }
+  .borderesdos{
+    background: #FFF;
+    width: 400px;
+    height: 1px;
+    margin-left: 40px;
+  }
+  section.servicios{
+    background: #C4C4C4;
+  }
+  .servicios{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 400px;
+    grid-template-areas: "mante fabri dise";
+  }
+  .mante{
+    grid-area: mante;
+    padding: 50px;
+  }
+  .fabri{
+    grid-area: fabri;
+    padding: 50px;
+  }
+  .dise{
+    grid-area: dise;
+    padding: 50px;
+  }
+  .mante .fabri .dise, p{
+    margin-top: 30px;
+  }
+  .cuadrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    vertical-align: top;
+    height: 150px;
+    background: #626262;
+    text-decoration: none;
+    border-radius: 30px;
+  }
+  .cuadrado h4 a{
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .cuadrado h4 a{
+    text-decoration: none;
+  }
+  .cuadrado h4 a:hover{
+    text-decoration: none;
+  }
+@media screen and (max-width: 600px) {
+  .servitodo{
+    margin-top: 0px;
+  }
+  section.servicios{
+    height: 1200px;
+  }
+  .servicios{
+   grid-template-areas: "mante mante mante mante"
+                        "fabri fabri fabri fabri"
+                        "dise dise dise dise";                     
+  }
+  .fabri{
+    margin-top: -40px;
+  }
+  .dise{
+    margin-top: -130px;
+  }
+}
+@media screen and (max-width: 412px) {
+  .servitodo{
+    margin-top: 0px;
+  }
+}
+/************** FIN servicios ******************/
+/************** INICIO sello ******************/
+  .sellotodo p{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .borderess{
+    background: #FFF;
+    width: 400px;
+    height: 1px;
+    margin-right: 40px;
+  }
+  .borderesdoss{
+    background: #FFF;
+    width: 400px;
+    height: 1px;
+    margin-left: 40px;
+  }
+  .sello img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 5px #999;
+  }
+  .sello p{
+    text-align: center;
+    padding: 100px 0 100px 0;
+  }
+  .estrellas img{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+  }
+  .wrapper{
+    width: 100%;
+    margin-top: 100px;
+    background: #fff;
+    padding: 30px 0;
+    height: 350px;
+  }
+  .slider-testimonial{
+    width: 85%;
+    max-width: 1400px;
+    margin: auto;
+  }
+  .testimonial-client{
+    margin-bottom: 15px;
+  }
+  .testimonial-client img{
+    width: 120px;
+    margin:auto;
+  }
+  .client-name{
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px;
+  }
+  .testimonial-text{
+    padding: 10px 120px;
+  }
+  .testimonial-text p{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    color: #454545;
+  }
+@media screen and (max-width: 600px) {
+  .client-name{
+    font-size: 20px;
+  }
+  .testimonial-text p{
+    font-size: 15px;
+  }
+  .testimonial-text{
+    padding: 10px 60px;
+  }
+  .sello p{
+    font-size: 12px;
+  }
+}
+/************** FIN sello ******************/
+/*<<------------------------------------------------GOOGLE MAPS------>>*/
+  .ubica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #008700 ;
+    height: 40px;
+  }
+  .ubica p{
+    font-size: 20px;
+    color: #FFF;
+    margin-top: 2px;
+  }
+  .map iframe{
+    width: 100%;
+    margin-bottom: -10px;
+  }
+/*<<------------------------------------------------FIN GOOGLE MAPS------>>*/
+.footer{    
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 400px;
+  grid-template-areas: "foouno foodos footres foocuatro";
+  background: #008700;
+}
+.footer h6{
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #FFF;
+  font-weight: 500;
+}
+.footer p{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: #FFF;
+}
+.margenes{
+  padding: 40px;
+  margin-left: -20px;
+}
+.foouno{
+  grid-area: foouno;
+}
+.foouno img{
+  height: 40px;
+  margin-bottom: 10px;
+}
+.foodos{
+  grid-area: foodos;
+}
+.footres{
+  grid-area: footres;
+}
+.foocuatro{
+  grid-area: foocuatro;
+}
+.footer .foocuatro p{
+  line-height: 30px;
+}
+.foocuatro a{
+  display: inline-block;
+  background: #003000;
+  color: #FFF;
+  line-height: 1;
+  padding: 10px 0;
+  margin-right: 4px;
+  margin-top: 30px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+.footer ul{
+  list-style: none;
+  text-decoration: none;
+  padding: 35px 0 30px 0;
+}
+.footer ul i{
+  padding-right: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+.footer ul li{
+  border-bottom: 1px solid #003000;
+  padding: 10px 0;
+  text-decoration: none;
+}
+.footer .foodos .margenes h6 ul li a{
+  text-decoration: none;
+  color: #FFF;
+}
+.footer ul li:first-child{
+  padding-top: 0;
+}
+@media screen and (max-width: 600px) {
+  .footer{
+   grid-template-areas: "foouno foouno foouno foouno"
+                        "foodos foodos foodos foodos"
+                        "footres footres footres footres"
+                        "foocuatro foocuatro foocuatro foocuatro";                     
+  grid-template-rows: 350px;
+  }
+}
+.contai{
+  background: #003000;
+  height: 70px;
+}
+.copyright{
+  text-align: center;
+  padding-top: 20px;
+}
+.credits{
+  text-align: center;
+  font-size: 11px;
+  color: #000;
+}
+.credits a{
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+}
+.credits a:hover{
+  color: #FFF;
+}
+.contaiorden{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
